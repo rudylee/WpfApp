@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="WpfApp.VideoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Coding4Fun.Kinect.Wpf.Controls;assembly=Coding4Fun.Kinect.Wpf"
+             xmlns:WPFMediaKit="clr-namespace:WPFMediaKit.DirectShow.Controls;assembly=WPFMediaKit"
+             mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+	>
+
+    <Canvas Name="LayoutRoot">
+        <Button x:Name="Closevideo" FontSize="48" Background="#FFFF2F2F" Content="Close Video" VerticalAlignment="Top" Click="Button_Click_1" BorderThickness="0" Grid.Column="1" Height="108" Width="373" Foreground="White" Canvas.Left="1547" Canvas.Top="962" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Panel.ZIndex="20" />
+        <WPFMediaKit:MediaUriElement x:Name="VideoControl"
+                              Stretch="UniformToFill"
+                              Volume="1"
+                              LoadedBehavior="Play" Height="835" Width="1372" Panel.ZIndex="10" MediaEnded="VideoControl_OnMediaEnded"/>
+        <controls:HoverButton Padding="0" x:Name="KinectButton" ImageSize="50"                                           
+                                ImageSource="/WpfApp;component/Content/Image/myhand-white.png"  
+                                ActiveImageSource="/WpfApp;component/Content/Image/myhand-white.png" 
+                                TimeInterval="2000"  Panel.ZIndex="30" Canvas.Left="10" Canvas.Top="10" Visibility="Hidden"  />
+    </Canvas>
+</UserControl>

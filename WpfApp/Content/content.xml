@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<videos>
+  <video>
+    <name>Toyota 86</name>
+    <filename>C:\Users\NICO\Desktop\toyota-1.mp4</filename>
+  </video>
+  <video>
+    <name>Toyota Cricket</name>
+    <filename>C:\Users\NICO\Desktop\toyota-2.mp4</filename>
+  </video>
+  <video>
+    <name>Toyota Japan</name>
+    <filename>C:\Users\NICO\Desktop\toyota-3.mp4</filename>
+  </video>
+  <video>
+    <name>Black Dog</name>
+    <filename>C:\Users\NICO\Desktop\VID-20130217-WA0000.mp4</filename>
+  </video>
+  <video>
+    <name>White Dog</name>
+    <filename>C:\Users\NICO\Desktop\VID-20110802-WA0001.mp4</filename>
+  </video>
+</videos>

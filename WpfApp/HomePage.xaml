@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WpfApp.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:Coding4Fun.Kinect.Wpf.Controls;assembly=Coding4Fun.Kinect.Wpf"
+             mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+	>
+    <Canvas Name="LayoutRoot">
+        <Button Name="Welcome" FontSize="48" Background="#FF28D338" Content="Welcome Video" HorizontalAlignment="Left" VerticalAlignment="Top" Width="600" Height="421" Click="Button_Click_2" Canvas.Left="124" Canvas.Top="564" Foreground="White" FontFamily="Segoe UI Light"/>
+        <Button Name="Findtoyota" FontSize="48" Background="#FF2FECFF" Content="Find Your Toyota" HorizontalAlignment="Left" VerticalAlignment="Top" Width="600" Height="421" Click="Button_Click_1" Canvas.Left="1067" Canvas.Top="564" Foreground="White" FontFamily="Segoe UI Light"/>
+        <Button Name="Gesture" Content="Gesture Menu" FontSize="48" Background="#FFFF2FB3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="600" Height="412" Canvas.Left="124" Canvas.Top="106" Foreground="White" FontFamily="Segoe UI Light" Click="Button_Click_3">
+        </Button>
+        <Button Name="Dynamic" Content="Dynamic Menu" FontSize="48" HorizontalAlignment="Left" Background="#FFD3BF00" VerticalAlignment="Top" Width="600" Height="412" Canvas.Left="1067" Canvas.Top="106" Foreground="White" FontFamily="Segoe UI Light" Click="Button_Click_4"/>
+        <Controls:HoverButton Margin="0,-4,250,254" Padding="0" x:Name="KinectButton" ImageSize="50"                                           
+                                ImageSource="/WpfApp;component/Content/Image/myhand.png"  
+                                ActiveImageSource="/WpfApp;component/Content/Image/myhand.png" 
+                                TimeInterval="2000"  Panel.ZIndex="1000" Visibility="Collapsed" />
+    </Canvas>
+</UserControl>
