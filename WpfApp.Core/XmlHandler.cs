@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
 using System.Xml;
 
 namespace WpfApp.Core
@@ -18,15 +19,13 @@ namespace WpfApp.Core
 
         public List<string> GetVideos()
         {
-            var videos = _xmlDocument.SelectSingleNode("videos").SelectNodes("video");
-            var videosList = new List<string>();
-
-            if (videos == null) return null;
-            foreach (XmlNode video in videos)
+            var selectSingleNode = _xmlDocument.SelectSingleNode("videos");
+            if (selectSingleNode != null)
             {
-                videosList.Add(video.SelectSingleNode("filename").InnerText);
+                var videos = selectSingleNode.SelectNodes("video");
+                return videos == null ? null : (from XmlNode video in videos let singleNode = video.SelectSingleNode("filename") where singleNode != null select singleNode.InnerText).ToList();
             }
-            return videosList;
+            return null;
         }
     }
 }
