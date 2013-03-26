@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
     <Canvas Name="LayoutRoot">
-        <TextBlock x:Name="DownloadProgress" Canvas.Left="378" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="214" Height="65" Width="1182" FontSize="48" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="DownloadProgress" Canvas.Left="400" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="224" Height="65" Width="1182" FontSize="48" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
         <Button Name="GoToApp" Content="Go to App" FontSize="48" Canvas.Left="1495" Canvas.Top="920" Width="349" Height="130" Foreground="White" Click="Button_Click_1" Visibility="Collapsed">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
