@@ -19,5 +19,6 @@
                                 ImageSource="/WpfApp;component/Content/Image/myhand-white.png"  
                                 ActiveImageSource="/WpfApp;component/Content/Image/myhand-white.png" 
                                 TimeInterval="2000"  Panel.ZIndex="30" Canvas.Left="10" Canvas.Top="10" Visibility="Hidden"  />
+        
     </Canvas>
 </UserControl>

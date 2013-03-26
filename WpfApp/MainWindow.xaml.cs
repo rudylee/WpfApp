@@ -11,7 +11,7 @@ namespace WpfApp
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
 
-            var videoPage = new VideoPage();
+            var videoPage = new UpdatePage();
             pageTransitionControl.ShowPage(videoPage);
         }
     }

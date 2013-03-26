@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Windows;
 using System.Windows.Controls;
-using System.Xml;
 using WpfApp.Core;
 using WpfPageTransitions;
 
@@ -22,15 +22,14 @@ namespace WpfApp
             _videoList = xmlHandler.GetVideos();
 
             _buttons = new List<Button> { Closevideo };
-
             Loaded += delegate
                 {
                     var kinectControl = new KinectControl(KinectButton, LayoutRoot.ActualHeight,
                                                           LayoutRoot.ActualWidth,
                                                           _buttons);
 
-                    VideoControl.Width = LayoutRoot.ActualWidth;
-                    VideoControl.Height = LayoutRoot.ActualHeight;
+                    //VideoControl.Width = LayoutRoot.ActualWidth;
+                    //VideoControl.Height = LayoutRoot.ActualHeight;
 
                     _currentVideo = 0;
                     PlayVideo(_currentVideo);
@@ -40,7 +39,8 @@ namespace WpfApp
 
         private void PlayVideo(int videoNumber)
         {
-            VideoControl.Source = new Uri(_videoList[videoNumber]);
+            var videoFolder = ConfigurationManager.AppSettings.Get("videoFolder");
+            VideoControl.Source = new Uri(videoFolder + _videoList[videoNumber]);
             VideoControl.Play();
         }
 
